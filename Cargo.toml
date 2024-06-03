@@ -1,0 +1,21 @@
+[package]
+name = "konbaato"
+version = "1.0.0"
+edition = "2021"
+authors = ["Christian Lewe <ch_lewe@agdsn.me>"]
+description = "Conversions between different Japanese scripts"
+license = "CC0-1"
+repository = "https://github.com/uncomputable/konbaato"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[profile.release]
+opt-level = 'z'
+lto = true
+
+[dependencies]
+wasm-bindgen = "0.2.92"
+
+[dev-dependencies]
+wasm-bindgen-test = "0.3.42"
