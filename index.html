@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>カナ・コンバート</title>
+</head>
+<body>
+    <div>
+        <textarea id="input" rows="10" cols="80" placeholder="テキストを入れてください"></textarea>
+    </div>
+    <div>
+        <button id="hira_to_kata" title="ひらがなをカタカナに換える">ひらがな→カタカナ</button>
+        <button id="kata_to_hira" title="カタカナをひらがなに換える">カタカナ→ひらがな</button>
+        <button id="vu_to_bu" title="ヴァ・ヴィ・ヴ・ヴェ・ヴォをバ・ビ・ブ・ベ・ボへ換える">ヴ→ブ</button>
+    </div>
+
+    <script type="module">
+        import init, { hira_to_kata, kata_to_hira, vu_to_bu } from './pkg/konbaato.js';
+
+        async function run() {
+            await init();
+
+            document.getElementById('hira_to_kata').addEventListener('click', () => {
+                const input = document.getElementById('input').value;
+                document.getElementById('input').value = hira_to_kata(input);
+            });
+            document.getElementById('kata_to_hira').addEventListener('click', () => {
+                const input = document.getElementById('input').value;
+                document.getElementById('input').value = kata_to_hira(input);
+            });
+            document.getElementById('vu_to_bu').addEventListener('click', () => {
+                const input = document.getElementById('input').value;
+                document.getElementById('input').value = vu_to_bu(input);
+            });
+        }
+
+        run();
+    </script>
+</body>
+</html>
