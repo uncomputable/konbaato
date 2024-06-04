@@ -2,9 +2,17 @@
 wasm:
     wasm-pack build --target web
 
-# Deploy local website for testing
-serve:
+# Deploy test website at ./dist
+deploy:
     just wasm
+    mkdir dist
+    cp pkg/konbaato_bg.wasm dist
+    cp pkg/konbaato.js dist
+    cp index.html dist
+
+# Serve local test website
+serve:
+    just deploy
     python -m http.server 8080
 
 # Open local website in Firefox
@@ -48,3 +56,4 @@ fuzz:
 clean:
     rm -rf target
     rm -rf pkg
+    rm -rf dist
