@@ -6,6 +6,7 @@ authors = ["Christian Lewe <ch_lewe@agdsn.me>"]
 description = "Conversions between different Japanese scripts"
 license = "CC0-1"
 repository = "https://github.com/uncomputable/konbaato"
+keywords = ["japanese", "kana", "hiragana", "katakana"]
 
 [lib]
 crate-type = ["cdylib", "rlib"]
