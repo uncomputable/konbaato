@@ -4,7 +4,7 @@ version = "1.0.0"
 edition = "2021"
 authors = ["Christian Lewe <ch_lewe@agdsn.me>"]
 description = "Conversions between different Japanese scripts"
-license = "CC0-1"
+license = "CC0-1.0"
 repository = "https://github.com/uncomputable/konbaato"
 keywords = ["japanese", "kana", "hiragana", "katakana"]
 
