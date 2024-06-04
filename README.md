@@ -1,5 +1,10 @@
 # Konbaato・コンバート
 
+[![GitHub](https://img.shields.io/badge/github-repo-blue.svg)](https://github.com/uncomputable/konbaato)
+[![crates.io](https://img.shields.io/crates/v/konbaato.svg)](https://crates.io/crates/konbaato)
+[![docs.rs](https://docs.rs/konbaato/badge.svg)](https://docs.rs/konbaato)
+[![CI](https://github.com/uncomputable/konbaato/actions/workflows/test.yml/badge.svg)](https://github.com/uncomputable/konbaato/actions/workflows/test.yml)
+
 Convert between different Japanese scripts.
 
 Ready for WASM 🌀
