@@ -131,6 +131,66 @@ export function kata_to_hira(input) {
 }
 
 /**
+* Map extended shinjitai (拡張新字体) to their original form (旧字体).
+*
+* - 撹拌 → 攪拌
+* - 冒涜 → 冒瀆
+* - 侭ならぬ → 儘ならぬ
+* - 森鴎外 → 森鷗外
+* - 活溌 → 活潑
+* @param {string} input
+* @returns {string}
+*/
+export function kakushin_to_kyuu(input) {
+    let deferred2_0;
+    let deferred2_1;
+    try {
+        const retptr = wasm.__wbindgen_add_to_stack_pointer(-16);
+        const ptr0 = passStringToWasm0(input, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
+        const len0 = WASM_VECTOR_LEN;
+        wasm.kakushin_to_kyuu(retptr, ptr0, len0);
+        var r0 = getInt32Memory0()[retptr / 4 + 0];
+        var r1 = getInt32Memory0()[retptr / 4 + 1];
+        deferred2_0 = r0;
+        deferred2_1 = r1;
+        return getStringFromWasm0(r0, r1);
+    } finally {
+        wasm.__wbindgen_add_to_stack_pointer(16);
+        wasm.__wbindgen_free(deferred2_0, deferred2_1, 1);
+    }
+}
+
+/**
+* Map kanji (表外字の旧字体) to extended shinjitai (拡張新字体).
+*
+* - 攪拌 → 撹拌
+* - 冒瀆 → 冒涜
+* - 儘ならぬ → 侭ならぬ
+* - 森鷗外 → 森鴎外
+* - 活潑 → 活溌
+* @param {string} input
+* @returns {string}
+*/
+export function kyuu_to_kakushin(input) {
+    let deferred2_0;
+    let deferred2_1;
+    try {
+        const retptr = wasm.__wbindgen_add_to_stack_pointer(-16);
+        const ptr0 = passStringToWasm0(input, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
+        const len0 = WASM_VECTOR_LEN;
+        wasm.kyuu_to_kakushin(retptr, ptr0, len0);
+        var r0 = getInt32Memory0()[retptr / 4 + 0];
+        var r1 = getInt32Memory0()[retptr / 4 + 1];
+        deferred2_0 = r0;
+        deferred2_1 = r1;
+        return getStringFromWasm0(r0, r1);
+    } finally {
+        wasm.__wbindgen_add_to_stack_pointer(16);
+        wasm.__wbindgen_free(deferred2_0, deferred2_1, 1);
+    }
+}
+
+/**
 * Map nonstandard `[v]` kana (ヴ) to standard `[b]` kana (ブ).
 *
 * - ヴァ → バ

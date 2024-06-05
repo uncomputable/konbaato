@@ -13,10 +13,12 @@
         <button id="hira_to_kata" title="ひらがなをカタカナに換える">ひらがな→カタカナ</button>
         <button id="kata_to_hira" title="カタカナをひらがなに換える">カタカナ→ひらがな</button>
         <button id="vu_to_bu" title="ヴァ・ヴィ・ヴ・ヴェ・ヴォをバ・ビ・ブ・ベ・ボへ換える">ヴ→ブ</button>
+        <button id="kyuu_to_kakushin" title="旧字体を拡張新字体に換える">鷗外→鴎外</button>
+        <button id="kakushin_to_kyuu" title="拡張新字体を旧字体に換える">鴎外→鷗外</button>
     </div>
 
     <script type="module">
-        import init, { hira_to_kata, kata_to_hira, vu_to_bu } from './konbaato.js';
+        import init, { hira_to_kata, kata_to_hira, vu_to_bu, kyuu_to_kakushin, kakushin_to_kyuu } from './konbaato.js';
 
         async function run() {
             await init();
@@ -32,6 +34,14 @@
             document.getElementById('vu_to_bu').addEventListener('click', () => {
                 const input = document.getElementById('input').value;
                 document.getElementById('input').value = vu_to_bu(input);
+            });
+            document.getElementById('kyuu_to_kakushin').addEventListener('click', () => {
+                const input = document.getElementById('input').value;
+                document.getElementById('input').value = kyuu_to_kakushin(input);
+            });
+            document.getElementById('kakushin_to_kyuu').addEventListener('click', () => {
+                const input = document.getElementById('input').value;
+                document.getElementById('input').value = kakushin_to_kyuu(input);
             });
         }
 
