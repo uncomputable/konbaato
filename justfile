@@ -5,7 +5,7 @@ wasm:
 # Deploy test website at ./dist
 deploy:
     just wasm
-    mkdir dist
+    mkdir -p dist
     cp pkg/konbaato_bg.wasm dist
     cp pkg/konbaato.js dist
     cp index.html dist
