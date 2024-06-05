@@ -13,7 +13,7 @@ deploy:
 # Serve local test website
 serve:
     just deploy
-    python -m http.server 8080
+    python -m http.server 8080 -d dist
 
 # Open local website in Firefox
 open:
