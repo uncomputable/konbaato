@@ -9,6 +9,8 @@ Convert between different Japanese scripts.
 
 Ready for WASM 🌀
 
+[A live demo is running on GitHub Pages](https://uncomputable.github.io/konbaato/).
+
 ## Use the crate in Rust
 
 Include the latest version of `konbaato` in your `Cargo.toml`.
