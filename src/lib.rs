@@ -12,6 +12,7 @@
 
 mod hirakata;
 mod mapping;
+mod shinkyuu;
 mod vubu;
 
 pub use hirakata::{hira_to_kata, kata_to_hira};
