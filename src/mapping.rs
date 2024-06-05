@@ -57,8 +57,8 @@ fn char_slices(s: &str) -> impl Iterator<Item = &str> {
 /// The two strings are not of the same length.
 pub fn char_mappings<'a>(from: &'a str, to: &'a str) -> impl Iterator<Item = (&'a str, &'a str)> {
     assert_eq!(
-        from.len(),
-        to.len(),
+        from.chars().count(),
+        to.chars().count(),
         "There must be as many pattern characters as replacement characters"
     );
     char_slices(from).zip(char_slices(to))
